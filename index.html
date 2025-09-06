@@ -2,9 +2,32 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Tasklist</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Tasklist</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="add_task.html">Agregar Tarea</a>
+            <a href="view_tasks.html">Ver Tareas</a>
+            <a href="about.html">Acerca de</a>
+        </nav>
+    </header>
+
+    <div>
+        <h2>Bienvenido a Tasklist</h2>
+        <p>Tu aplicación para gestionar tareas de manera eficiente.</p>
+
+        <form  name="addTask">
+            <fieldset>
+                <legend>Agregar Nueva Tarea</legend>
+                <input type="text" name="taskName" required>
+                <input type="date" name="date" required>
+                <input type="textarea" name="description" required>
+                <button type="submit">Agregar Nueva Tarea</button>
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
