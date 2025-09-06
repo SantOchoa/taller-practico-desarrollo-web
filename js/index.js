@@ -6,10 +6,12 @@ form.addEventListener('submit', (e)=> {
     const task = form['taskName'].value
     const date = form['date'].value
     const description = form['description'].value
+    const status = 'incomplete'
     const savetask = {
         task,
         date,
-        description
+        description,
+        status
     }
     num++
     localStorage.setItem(`task_${num}`, JSON.stringify(savetask))
