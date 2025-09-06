@@ -1,7 +1,10 @@
 
-document.getElementById('show').addEventListener('click', (event) => {
+document.getElementById('showAllTasks').addEventListener('click', (event) => {
     event.preventDefault();
-    table.textContent = '';
+    for (){
+        
+    }
+    localStorage.getItem('operacion_1');
     const thead = document.createElement('thead');
     const tr = document.createElement('tr');
     const thFecha = document.createElement('th');
