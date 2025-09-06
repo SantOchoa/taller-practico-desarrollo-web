@@ -1,6 +1,6 @@
 const table = document.createElement('table');
-table.className = 'table table-striped';
 
+document.getElementById('showTasks').addEventListener('click', () => {
 const thead = document.createElement('thead');
 const headerRow = document.createElement('tr');
 const thFechaHeader = document.createElement('th');
@@ -31,5 +31,7 @@ for (let i = 0; i < localStorage.length; i++) {
 }
 table.appendChild(tbody);
 
+
 // Añade la tabla al cuerpo del documento para que se muestre en la página
 document.body.appendChild(table);
+});
