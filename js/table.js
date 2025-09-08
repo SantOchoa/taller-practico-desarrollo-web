@@ -1,9 +1,7 @@
 
 document.getElementById('showAllTasks').addEventListener('click', (event) => {
     event.preventDefault();
-    for (){
-        
-    }
+
     localStorage.getItem('operacion_1');
     const thead = document.createElement('thead');
     const tr = document.createElement('tr');

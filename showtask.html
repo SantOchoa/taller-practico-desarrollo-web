@@ -6,16 +6,43 @@
 </head>
 <body>
     <h1>Lista de Tareas</h1>
-    <ul id="taskList"></ul>
-    <button id="showTasks">Mostrar Tareas</button>
-    <papita>   </papita>
     <form id="searchTask">
         <fieldset>
             <legend>Buscar Tarea</legend>
-            <input type="text" name="nameTask" required>
-            <button type="submit">Buscar Tarea</button>
+            <input type="text" name="nameTask" placeholder="Nombre de la Tarea" required>
+            <button type="submit">Filtrar Tareas</button>
         </fieldset>
     </form>
+    <form id="filterTask">
+        <fieldset>
+            <legend>Filtrar Tarea</legend>
+            <select name="nameTask" required>
+                <option value="all" disabled selected>Todas</option>
+                <option value="complete" >Completado</option>
+                <option value="incomplete">Incompleto</option>
+            </select>
+            <button type="submit">Filtrar Tareas</button>
+        </fieldset>
+    </form>
+    <table id="taskTable" border="1">
+        <caption>Lista de Tareas</caption>
+        <thead>
+            <tr>
+                <th>Nombre de la Tarea</th>
+                <th>Descripción</th>
+                <th>Fecha de Vencimiento</th>
+                <th>Estado</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="taskTableBody">
+        
+        </tbody>
+    </table>
+
+
+
+    <script src="js/variables.js"></script>
     <script src="js/showtask.js"></script>
 </body>
 </html>
