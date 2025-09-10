@@ -1,0 +1,76 @@
+*{
+    font-family: "Bodoni Moda", serif;
+}
+body{
+    margin: 0%;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.table{
+    display: grid;
+    grid-column: auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;      
+    width: auto;
+    height: 100vh;
+    padding-inline: 50px;
+    background-image: url(../images/van-background.jpg);
+    background-size: cover;
+}
+
+.table div{
+    border: 2px solid black;
+    height: 125px;
+    width: 100px;
+    background-color: blue;
+    margin: 10px;
+    border-radius: 15px;
+}
+.info{
+
+    position: fixed;
+    width: 70%;
+    height: 70%;
+    justify-content: center;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 75px;
+    font-weight: 900 ;
+}
+.line{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#start-button{
+    background-color: #0069b5;
+    border: none;
+    border-radius: 9px;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    
+}
+h1, p, span{
+    color: white;
+    text-align: center;
+}
+p{
+    font-size: 12px;
+    padding-inline: 20px;
+    margin-top: -15px;
+}
