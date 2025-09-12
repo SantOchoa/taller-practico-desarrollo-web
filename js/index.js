@@ -1,8 +1,7 @@
 const form = document.forms['addTask']
-let num = 0
 
-form.addEventListener('submit', (e)=> {
-    e.preventDefault()
+form.addEventListener('submit', (event)=> {
+    event.preventDefault()
     const task = form['taskName'].value
     const date = form['date'].value
     const description = form['description'].value
@@ -13,7 +12,7 @@ form.addEventListener('submit', (e)=> {
         description,
         status
     }
-    num++
+    const num = localStorage.length +1
     localStorage.setItem(`task_${num}`, JSON.stringify(savetask))
     form.reset()
 })
