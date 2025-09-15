@@ -66,6 +66,25 @@ const sortdatabydate = (data) => {
     });
 }
 
+const countstatus = (data, status) => {
+    let count = 0
+    for(i=0;i<data.length;i++){
+        const item = data[i]
+        const task = item.task
+        if(task.status == status){
+            count++
+        }
+    }
+    return count
+}
+
+const updateCounters = (data) => {
+    allbtn.textContent = data.length;
+    completebtn.textContent = countstatus(data, "complete");
+    incompletbtn.textContent = countstatus(data, "incomplete");
+}
+
+
 formsearch.addEventListener('submit', (event) => {
     event.preventDefault()
     search = formsearch['nameTask'].value
@@ -106,6 +125,12 @@ formsearch.addEventListener('submit', (event) => {
             select.value = task.status
             select.addEventListener('change', ()=>{
                 localStorage.setItem(item.key, JSON.stringify({...task, status: select.value}))
+                let currentData = filldata()
+                let filteredData = filterfun([...currentData])
+                let searchedData = searchfun([...filteredData])
+                searchedData = sortdatabydate([...searchedData])
+                updateCounters(searchedData)
+                tr.remove()
             })
             td4.appendChild(select)
             const td5 = document.createElement('td')
@@ -123,6 +148,7 @@ formsearch.addEventListener('submit', (event) => {
             tr.appendChild(td5)
             tbody.appendChild(tr)
         }
+        updateCounters(searchedData)
     }
     console.log(searchedData)
 })
@@ -136,6 +162,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let filteredData = filterfun([...data])
     let searchedData = searchfun([...filteredData])
     searchedData = sortdatabydate([...searchedData])
+    tbody.innerHTML = ''
     if (searchedData.length == 0){
         const tr = document.createElement('tr')
         const td = document.createElement('td')
@@ -167,6 +194,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
             select.value = task.status
             select.addEventListener('change', ()=>{
                 localStorage.setItem(item.key, JSON.stringify({...task, status: select.value}))
+                let currentData = filldata()
+                let filteredData = filterfun([...currentData])
+                let searchedData = searchfun([...filteredData])
+                searchedData = sortdatabydate([...searchedData])
+                updateCounters(searchedData)
             })
             td4.appendChild(select)
             const td5 = document.createElement('td')
@@ -184,6 +216,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             tr.appendChild(td5)
             tbody.appendChild(tr)
         }
+        updateCounters(searchedData)
     }
     console.log(searchedData)
 
