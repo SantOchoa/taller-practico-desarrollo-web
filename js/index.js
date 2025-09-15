@@ -13,7 +13,6 @@ const lastkeylocalstorage = ()=>{
 }
 
 form.addEventListener('submit', (event)=> {
-    debugger
     event.preventDefault()
     const task = form['taskName'].value
     const date = form['date'].value
