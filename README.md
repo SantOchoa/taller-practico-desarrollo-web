@@ -1,6 +1,6 @@
 # Lista de Tareas
 
-![Task List](./TaskList.png)
+![Task List](banner-readme.jpg)
 
 Este proyecto cumple con los siguientes requisitos:
 
