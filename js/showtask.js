@@ -130,7 +130,9 @@ formsearch.addEventListener('submit', (event) => {
                 let searchedData = searchfun([...filteredData])
                 searchedData = sortdatabydate([...searchedData])
                 updateCounters(searchedData)
-                tr.remove()
+                if(filter != "all"){
+                    tr.remove()
+                }
             })
             td4.appendChild(select)
             const td5 = document.createElement('td')
