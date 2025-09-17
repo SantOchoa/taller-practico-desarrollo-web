@@ -2,30 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Tasklist</title>
 </head>
 <body>
-    <header>
-        <h1>Tasklist</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="showtask.html">Ver Tareas</a>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Tasklist</h1>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="showtask.html">Ver Tareas</a>
+            </nav>
+        </header>
 
-    <div>
-        <h2>Bienvenido a Tasklist</h2>
-        <p>Tu aplicación para gestionar tareas de manera eficiente.</p>
+        <div>
+            <h2>Bienvenido a Tasklist</h2>
+            <p>Tu aplicación para gestionar tareas de manera eficiente.</p>
 
-        <form  name="addTask">
-            <fieldset>
-                <legend>Agregar Nueva Tarea</legend>
-                <input type="text" name="taskName" required>
-                <input type="date" name="date" required>
-                <input type="textarea" name="description" required>
-                <button type="submit">Agregar Nueva Tarea</button>
-            </fieldset>
-        </form>
+            <form  name="addTask">
+                <fieldset>
+                    <legend>Agregar Nueva Tarea</legend>
+                    <input type="text" name="taskName" required>
+                    <input type="date" name="date" required>
+                    <input type="textarea" name="description" required>
+                    <button type="submit">Agregar Nueva Tarea</button>
+                </fieldset>
+            </form>
+        </div>
     </div>
     <script src="js/index.js"></script>
 </body>
