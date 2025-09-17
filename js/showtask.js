@@ -123,7 +123,9 @@ formsearch.addEventListener('submit', (event) => {
             select.appendChild(option1)
             select.appendChild(option2)
             select.value = task.status
+            setSelectColor(select);
             select.addEventListener('change', ()=>{
+                setSelectColor(select);
                 localStorage.setItem(item.key, JSON.stringify({...task, status: select.value}))
                 let currentData = filldata()
                 let filteredData = filterfun([...currentData])
@@ -194,7 +196,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             select.appendChild(option1)
             select.appendChild(option2)
             select.value = task.status
+            setSelectColor(select);
             select.addEventListener('change', ()=>{
+                setSelectColor(select);
                 localStorage.setItem(item.key, JSON.stringify({...task, status: select.value}))
                 let currentData = filldata()
                 let filteredData = filterfun([...currentData])
@@ -223,3 +227,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log(searchedData)
 
 })
+const setSelectColor = (selectElement) => {
+    if (selectElement.value === 'complete') {
+        selectElement.classList.remove('status-select-incomplete');
+        selectElement.classList.add('status-select-complete');
+    } else {
+        selectElement.classList.remove('status-select-complete');
+        selectElement.classList.add('status-select-incomplete');
+    }
+};

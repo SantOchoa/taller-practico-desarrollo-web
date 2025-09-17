@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 1em;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+
+.navegation {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+header nav a {
+    font-weight: 600;
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #333;
+    padding: 0 10px;
+}
+
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.status-select-complete {
+    color: #28a745; 
+    font-weight: bold;
+}
+
+.status-select-incomplete {
+    color: #dc3545; 
+    font-weight: bold;
+}
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#searchTask fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+#searchTask button {
+    width: auto; 
+    padding: 12px 20px;
+    font-size: 1em;
+}
+
+
+.counter {
+    text-align: center;
+    margin: 25px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.counter span {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.2em;
+}
+
+
+
+#taskTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#taskTable th,
+#taskTable td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+#taskTable thead th {
+    background-color: #f2f2f2;
+    font-weight: 700;
+    color: #333;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}

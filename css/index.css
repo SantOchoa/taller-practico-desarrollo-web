@@ -8,4 +8,119 @@ body{
     background-color: rgb(13, 17, 23);
     color:rgb(240, 246, 252);
 }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2em; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #3498db; 
+    font-weight: 600;
+    margin-left: 20px;
+    font-size: 1.1em;
+    transition: color 0.3s ease; 
+}
+
+nav a:hover {
+    color: #2980b9;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #333;
+    padding: 0 10px; 
+}
+
+input[type="text"],
+input[type="date"],
+input[type="textarea"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
 
