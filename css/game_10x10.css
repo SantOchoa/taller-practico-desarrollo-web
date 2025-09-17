@@ -1,0 +1,18 @@
+.cart {
+    width: 30px;
+    height: 55px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-size: cover;
+    cursor: pointer;
+}
+.table{
+    display: grid;
+    grid-column: auto;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;      
+    width: auto;
+    height: 100vh;
+    padding-inline: 50px;
+    background-size: cover;
+}

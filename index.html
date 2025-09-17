@@ -5,49 +5,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-
     <title>Memorama</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div class="container">
-        <div class="table">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
         <section class="info">
-            
+            <div >
+                <h1>Vincent Van Gogh</h1>
+            </div>
             <div class="line">
                 <p>
                     Encuentra las parejas de cuadros
                     de Vincent Van Gogh y deja que la memoria te guíe
                     entre pinceladas y estrellas.
                 </p>
-                <button id="start-button">Comenzar Juego</button>
-                <div class="clock">
-                    <span id="minutes">00</span><span class="colon">:</span><span id="seconds">00</span>
-                </div>
+                <form name="start-button">
+                    <select id="difficulty">
+                        <option value="4">Fácil (4x4)</option>
+                        <option value="6">Medio (6x6)</option>
+                        <option value="10">Difícil (10x10)</option>
+                    </select>
+                    <button type="submit" id="start-button">Comenzar Juego</button>
+                </form>
             </div> 
-            <div >
-               
-                <h1>Vincent Van Gogh</h1>
-
-            </div>
         </section>
     </div>
+    <script src="js/index.js"></script>
 </body>
 </html>

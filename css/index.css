@@ -3,6 +3,10 @@
 }
 body{
     margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
@@ -11,26 +15,7 @@ body{
     justify-content: space-between;
 }
 
-.table{
-    display: grid;
-    grid-column: auto;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;      
-    width: auto;
-    height: 100vh;
-    padding-inline: 50px;
-    background-image: url(../images/van-background.jpg);
-    background-size: cover;
-}
 
-.table div{
-    border: 2px solid black;
-    height: 125px;
-    width: 100px;
-    background-color: blue;
-    margin: 10px;
-    border-radius: 15px;
-}
 .info{
 
     position: fixed;
@@ -38,7 +23,6 @@ body{
     height: 70%;
     justify-content: center;
     background-color: black;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
