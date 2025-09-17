@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="CSS/principal.css">
+</head>
+<body>
+
+    <h1>Juego del Ahorcado </h1>
+
+    <main class="ContenedorJuego">
+        <div class="ColumnaIzquierda">
+            <div class="ContenedorLetrasUsadas">
+                <h2>Letras Usadas</h2>
+                <p id="LetrasUsadas"></p>
+            </div>
+        </div>
+
+        <div class="ColumnaDerecha">
+            <div id="ContenedorPalabra"></div>
+            <div id="Teclado"></div>
+            <div id="MensajeDeJuego"></div>
+            <button id="BotonJuegoNuevo">Nueva Partida</button>
+            <div class="Marcador">
+                <h2>Puntuación</h2>
+                <p>Victorias: <span id="ContadorVictorias">0</span></p>
+                <p>Derrotas: <span id="ContadorDerrotas">0</span></p>
+            </div>
+        </div>
+    </main>
+
+    <section class="SeccionHistorial">
+        <h2>Historial de Partidas</h2>
+        <div id="ContenedorHistorial">
+            <p>No hay partidas en el historial.</p>
+        </div>
+    </section>
+    
+    <script src="JS/js.js"></script>
+</body>
+</html>
