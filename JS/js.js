@@ -29,12 +29,12 @@ function iniciarJuego() {
 }
 
 function crearTeclado() {
-        tecladoEl.innerHTML = '';
-        const alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        alfabeto.split('').forEach(letra => {
-            const boton = document.createElement('button');
-            boton.textContent = letra;
-            boton.addEventListener('click', () => manejarIntento(letra));
-            tecladoEl.appendChild(boton);
-        });
-    }
+    tecladoEl.innerHTML = '';
+    const alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    alfabeto.split('').forEach(letra => {
+       const boton = document.createElement('button');
+        boton.textContent = letra;
+        boton.addEventListener('click', () => manejarIntento(letra));
+        tecladoEl.appendChild(boton);
+    });
+}
