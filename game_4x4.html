@@ -2,15 +2,40 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/images.css">
     <link rel="stylesheet" href="css/game_4x4.css">
+    <link rel="stylesheet" href="css/gameOverlay.css">
     <title>Juego 4x4</title>
 </head>
 <body>
-    <div class="container">
+    <div class="top-bar">
+        <span id="timer">00:00</span>
+        <span id="attempts">Intentos: 0</span>
+        <span id="pairs">Parejas: 0 / 8</span>
+    </div>
+
+
+    <div class="container" name="container">
         <div class="table" id="table">
             
         </div>
     </div>
+
+    <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <h2>¡Partida Finalizada!</h2>
+            <p id="final-time"></p>
+            <p id="final-attempts"></p>
+            <div class="records">
+                <h3>Records</h3>
+                <p id="record-time"></p>
+                <p id="record-attempts"></p>
+            </div>
+            <button id="play-again">Jugar Otra vez?</button>
+        </div>
+    </div>
+
     <script src="js/variables.js"></script>
+    <script src="js/game_logic.js"></script>
 </body>
 </html>

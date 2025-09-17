@@ -7,24 +7,32 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
 }
-
-
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
 .container{
     display: flex;
     justify-content: space-between;
 }
-
-
 .info{
-
     position: fixed;
     width: 70%;
     height: 70%;
     justify-content: center;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.884);
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
 }
 h1{
     font-size: 75px;
@@ -54,7 +62,7 @@ h1, p, span{
     text-align: center;
 }
 p{
-    font-size: 12px;
+    font-size: 15px;
     padding-inline: 20px;
     margin-top: -15px;
 }
