@@ -2,9 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/images.css">
-    <link rel="stylesheet" href="css/game_4x4.css">
-    <link rel="stylesheet" href="css/gameOverlay.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dificultad.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Juego 4x4</title>
 </head>
 <body>
@@ -23,19 +25,20 @@
 
     <div id="overlay" class="overlay hidden">
         <div class="overlay-content">
-            <h2>¡Partida Finalizada!</h2>
-            <p id="final-time"></p>
-            <p id="final-attempts"></p>
-            <div class="records">
-                <h3>Records</h3>
-                <p id="record-time"></p>
-                <p id="record-attempts"></p>
+            <div class="MejoresPuntajes">
+                <h2>Mejores Puntuaciones</h2>
+                <p>Menor Intentos: <span id="MejorIntentos">N/A</span></p>
+                <p>Mejor Tiempo: <span id="MejorTiempo">N/A</span></p>
             </div>
-            <button id="play-again">Jugar Otra vez?</button>
         </div>
     </div>
-
+    <a href="index.html">
+        <button id="play-again">Rendirse</button>
+    </a>
     <script src="js/variable.js"></script>
-    <script src="js/game_4x4.js"></script>
+    <script src="js/configurationIndexedDB.js"></script>
+    <script src="js/cartasFuntions.js"></script>
+    <script src="js/eventDom.js"></script>
+    
 </body>
 </html>

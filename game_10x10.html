@@ -2,16 +2,42 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/game_10x10.css">
-    <link rel="stylesheet" href="css/images.css">
-    <title>Juego 10x10</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dificultad.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Juego 4x4</title>
 </head>
 <body>
-    <div class="container">
+    <div class="top-bar">
+        <span id="timer">00:00</span>
+        <span id="attempts">Intentos: 0</span>
+        <span id="pairs">Parejas: 0 / 8</span>
+    </div>
+    <div class="container" name="container">
         <div class="table" id="table">
             
         </div>
     </div>
-    <script src="js/variables.js"></script>
+
+    <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <div class="MejoresPuntajes">
+                <h2>Mejores Puntuaciones</h2>
+                <p>🏆 Menor Intentos: <span id="MejorIntentos">N/A</span></p>
+                <p>⏱️ Mejor Tiempo: <span id="MejorTiempo">N/A</span></p>
+                <a href="index.html">
+                    <button id="play-again">Jugar Otra vez?</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/variable.js"></script>
+    <script src="js/configurationIndexedDB.js"></script>
+    <script src="js/cartasFuntions.js"></script>
+    <script src="js/eventDom.js"></script>
+    
 </body>
 </html>
