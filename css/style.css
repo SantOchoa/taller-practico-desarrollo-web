@@ -39,20 +39,25 @@ button {
 }
 
 button:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
 }
 
-.Estadisticas {
+.top-bar {
+    font-size: 20px;
     display: flex;
-    gap: 30px;
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    gap: 40px;
+    margin-block: 20px;
+    padding: 10px;
+    border-radius: 10px;
+   
 }
+
 .JuegoMemorama {
     display: grid;
     gap: 10px;
     perspective: 1000px;
 }
+
 .Carta {
     width: 100px;
     height: 100px;
@@ -61,6 +66,8 @@ button:hover {
     transition: transform 0.6s;
     cursor: pointer;
 }
+
+
 .Carta:hover{
     transform: scale(1.1);
 }
@@ -101,15 +108,75 @@ button:hover {
 }
 
 .Cara.Trasera img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .MejoresPuntajes {
-    margin-top: 20px;
-    padding: 15px;
+    font-family: "Inter", sans-serif;
     background-color: #ffffff;
-    border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
+}
+
+#give-up{
+    background-color: rgb(207, 50, 50);
+    border:0px;
+    margin: 30px;
+}
+/* Modal Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Ocultar el modal */
+.hidden {
+    display: none;
+}
+
+/* Contenido del modal */
+.overlay-content {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    text-align: center;
+    min-width: 300px;
+}
+
+.overlay-content h2 {
+    margin-bottom: 1rem;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 2rem;
+}
+
+.overlay-content p {
+    margin: 0.5rem 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+}
+
+.overlay-content button {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.overlay-content button:hover {
+    background: #0056b3;
 }

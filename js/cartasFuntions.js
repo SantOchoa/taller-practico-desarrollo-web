@@ -55,11 +55,13 @@ function verificarCoincidencia() {
 }
 
 function manejarCoincidencia() {
-    primeraCarta.classList.add('Coincidencia');
-    segundaCarta.classList.add('Coincidencia');
+    primeraCarta.classList.add('Coincidencia')
+    segundaCarta.classList.add('Coincidencia')
     paresEncontrados++;
+    let encontrados = document.getElementById('pairs')
+    encontrados.textContent= `${paresEncontrados}/8`
     reiniciarTurno();
-    if (paresEncontrados === totalPares) finalizarJuego();
+    if (paresEncontrados === totalPares) finalizarJuego()
 }
 function manejarNoCoincidencia() {
     setTimeout(() => {

@@ -57,6 +57,9 @@ h1{
     margin-top: 20px;
     
 }
+#start-button:hover{
+    transform: scale(1.1);
+}
 h1, p, span{
     color: white;
     text-align: center;
@@ -65,4 +68,32 @@ p{
     font-size: 15px;
     padding-inline: 20px;
     margin-top: -15px;
+}
+form[name="start-button"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+form[name="start-button"] select{
+    width: 300px;
+    background-color: rgba(186, 85, 211, 0.37);
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 9px;
+}
+select option {
+  background-color: #26022e79; 
+  color: #ffffff;            
+  padding: 8px;
+  border-radius: 9px;
+}
+select option:checked {
+  background-color: #3b023b8f; 
+  color: #ffffff;
+}
+select option:hover {
+  background-color: #7d3c98;
+  color: #fff;
 }

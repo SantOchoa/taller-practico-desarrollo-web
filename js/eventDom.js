@@ -26,20 +26,25 @@
 }
 
 function configurarTablero(dificultad) {
-        tablegame.className = 'JuegoMemorama';
-        if (dificultad === 4) tablegame.classList.add('Facil');
-        else if (dificultad === 6) tablegame.classList.add('Medio');
-        else tablegame.classList.add('Dificil');
+    tablegame.className = 'JuegoMemorama';
+    if (dificultad === 4) tablegame.classList.add('Facil');
+    else if (dificultad === 6) tablegame.classList.add('Medio');
+    else tablegame.classList.add('Dificil');
 } 
 
 function finalizarJuego() {
-        clearInterval(intervaloTiempo);
-        const tiempoFinal = Math.floor((Date.now() - tiempoInicio) / 1000);
-        setTimeout(() => {
-            alert(`¡Felicidades! Has ganado.\nIntentos: ${intentos}\nTiempo: ${tiempoFinal} segundos.`);
-            guardarPuntuacion(intentos, tiempoFinal);
-        }, 500);
-    }
+    clearInterval(intervaloTiempo);
+    const tiempoFinal = Math.floor((Date.now() - tiempoInicio) / 1000);
+    document.getElementById('modalIntentos').textContent = intentos;
+    document.getElementById('modalTiempo').textContent = tiempoFinal;
+    document.getElementById('resultadoModal').classList.remove('hidden');
+    guardarPuntuacion(intentos, tiempoFinal);
+}
+
+function cerrarModal() {
+    document.getElementById('resultadoModal').classList.add('hidden');
+    location.reload();
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {
