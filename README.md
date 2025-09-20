@@ -1,73 +1,66 @@
-# Memorama
+# 🃏 Memorama - Juego de Memoria Visual
 
-![Icon Van](images/image13.jpg)
+![van](images/image13.jpg)
 
-Este proyecto cumple con los siguientes requisitos:
-
-- [x]  Mostrar cartas boca abajo que al hacer clic se volteen.
-- [x]  Al voltear dos cartas, si son iguales permanecen descubiertas; si no, deben volver a taparse.
-- [x]  El juego termina cuando todas las cartas se han encontrado.
-- [x]  Al finalizar, debe mostrar cuántos intentos se hicieron.
-- [x]  Contar el tiempo que tardó en completarse el juego.
-- [x]  Guardar el mejor tiempo o el menor número de intentos alcanzados.
-- [x]  Incluir un nivel de dificultad con más cartas. 4x4,  6x6, 10x10
+Un juego clásico de **Memorama** desarrollado con **HTML, CSS y JavaScript**, que además integra **IndexedDB** para guardar las estadísticas de cada jugador.  
 
 ---
 
-## Descripción Detallada del Funcionamiento
-
-### 1. **index.html**
-Archivo principal donde puedes **elegir el nivel del juego**.  
-Contiene los campos:
-- Un selector de nivel
-- Boton que conduce al nivel seleccionado
-
-Al seleccionar uno de los nivele y oprimir el boton lo conduce al nivel correspondiente.
-
-### 2. **js/index.js**
-Este archivo gestiona el **transision a otras paginas despues del **:
-- Escucha el evento `submit` del formulario.
-- Obtiene los datos ingresados.
-- Genera una clave única para cada tarea (`task_1`, `task_2`, ...).
-- Guarda la tarea en Local Storage en formato JSON.
-
-### 3. **showtask.html**
-Página para **visualizar y gestionar las tareas**:
-- Muestra una tabla con todas las tareas guardadas.
-- Incluye un formulario para buscar tareas por nombre y filtrar por estado (todas, completadas, incompletas).
-- Muestra contadores de tareas totales, completadas e incompletas.
-
-### 4. **js/variables.js**
-Define las **variables globales** usadas en la gestión de tareas:
-- Referencias al formulario de búsqueda, tabla, y elementos de contador.
-
-### 5. **js/showtask.js**
-Controla la **visualización, filtrado, búsqueda, orden y eliminación de tareas**:
-- `filldata`: Obtiene todas las tareas del Local Storage.
-- `filterfun`: Filtra tareas por estado.
-- `searchfun`: Busca tareas por nombre.
-- `sortdatabydate`: Ordena las tareas por fecha.
-- `countstatus`: Cuenta tareas por estado.
-- `updateCounters`: Actualiza los contadores en pantalla.
-- Renderiza la tabla de tareas, mostrando el nombre, descripción, fecha, estado (editable con `<select>`) y botón para eliminar.
-- Al cambiar el estado de una tarea, se actualiza el Local Storage y los contadores.
-- Al eliminar una tarea, se elimina del Local Storage y de la tabla.
+## 🎯 Objetivo del Proyecto
+Este proyecto busca poner en práctica:
+- La manipulación del **DOM** de forma dinámica.
+- El uso de **IndexedDB** para almacenamiento en el navegador.
+- La implementación de lógica de juego interactiva.
+- El diseño modular con **HTML, CSS y JS**.
+- La gestión de distintos niveles de dificultad.
 
 ---
 
-## ¿Cómo funciona?
+## 🕹️ Reglas del Juego
+1. Se muestran todas las cartas **boca abajo**.
+2. Al hacer clic en una carta, esta se **voltea**.
+3. Si las dos cartas seleccionadas son **iguales**, permanecen descubiertas.
+4. Si son **diferentes**, se vuelven a tapar automáticamente.
+5. El juego termina cuando todas las cartas han sido encontradas.
+6. Al finalizar, se muestra:
+   - Número total de **intentos**.
+   - **Tiempo total** que tardó en completarse.
+7. Se guarda en **IndexedDB**:
+   - El **mejor tiempo** alcanzado.
+   - El **menor número de intentos**.
 
-1. **Registrar tarea:**  
-   Ve a la página principal, llena el formulario y guarda la tarea. Se almacena en Local Storage.
+---
 
-2. **Visualizar tareas:**  
-   Ve a "Ver Tareas". Se muestran todas las tareas en una tabla ordenada por fecha.
+## 🎚️ Niveles de Dificultad
+El jugador puede elegir entre diferentes tableros:
+- 🟩 **3x3** → Nivel fácil.  
+- 🟦 **6x6** → Nivel intermedio.  
+- 🟥 **10x10** → Nivel avanzado.  
 
-3. **Filtrar y buscar:**  
-   Usa el formulario para buscar por nombre o filtrar por estado.
+Cada nivel aumenta el número de cartas y la complejidad del juego.
 
-4. **Cambiar estado:**  
-   Usa el `<select>` en la columna "Estado" para marcar una tarea como completada o incompleta. Los contadores se actualizan automáticamente.
+---
 
-5. **Eliminar tarea:**  
-   Haz clic en el botón "Eliminar" para borrar la tarea de la lista y del Local Storage.
+## 📂 Estructura del Proyecto
+```bash
+TALLER-PRACTICO
+│── css/
+│   ├── dificultad.css          # Estilos para selector de dificultad
+│   ├── index.css               # Estilos generales de la página principal
+│   └── style.css               # Estilos de las cartas y tablero
+│
+│── images/                     # Carpeta de imágenes de las cartas
+│
+│── js/
+│   ├── cartasFuntions.js       # Funciones principales del juego
+│   ├── configurationIndexedDB.js # Configuración y manejo de IndexedDB
+│   ├── eventDom.js             # Eventos del DOM (clics, interacciones)
+│   ├── index.js                # Lógica inicial del proyecto
+│   └── variable.js             # Variables globales
+│
+│── game_4x4.html               # Tablero 4x4 (modo clásico)
+│── game_6x6.html               # Tablero 6x6 (intermedio)
+│── game_10x10.html             # Tablero 10x10 (avanzado)
+│── index.html                  # Página principal
+│── README.md                   # Documentación del proyecto
+
