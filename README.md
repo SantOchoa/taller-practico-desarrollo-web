@@ -25,7 +25,7 @@ Con esta app podrás:
 - 💾 Guardar los datos en el navegador (persistencia local).  
 
 📸 **Vista previa**:  
-![Historial de Tareas](assets/tareas.png)
+![Historial de Tareas](tasklist.png)
 
 ---
 
@@ -42,7 +42,7 @@ Características principales:
 - 📈 Niveles de dificultad: **3x3**, **6x6**, **10x10**.  
 
 📸 **Vista previa**:  
-![Memorama](assets/memorama.png)
+![Memorama](memorama.png)
 
 ---
 
@@ -61,7 +61,7 @@ Incluye:
 - 💾 Palabras almacenadas de manera persistente.  
 
 📸 **Vista previa**:  
-![Ahorcado](assets/ahorcado.png)
+![Ahorcado](ahorcado.png)
 
 ---
 
