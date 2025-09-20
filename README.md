@@ -33,7 +33,7 @@ Este proyecto busca poner en práctica:
 
 ## 🎚️ Niveles de Dificultad
 El jugador puede elegir entre diferentes tableros:
-- 🟩 **3x3** → Nivel fácil.  
+- 🟩 **4x4** → Nivel fácil.  
 - 🟦 **6x6** → Nivel intermedio.  
 - 🟥 **10x10** → Nivel avanzado.  
 
