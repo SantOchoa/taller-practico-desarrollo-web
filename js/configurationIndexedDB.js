@@ -19,35 +19,35 @@ function configurarBaseDeDatos() {
     }
 }
 function guardarPuntuacion(intentosFinal, tiempoFinal) {
-    if (!baseDeDatos) return;
+    if (!baseDeDatos) return
     
     let dificultad =0
     if (window.location.href.includes('game_4x4.html')){
-        dificultad = 4;
+        dificultad = 4
     }
     else if (window.location.href.includes('game_6x6.html')){
-        dificultad = 6;
+        dificultad = 6
     }
     else if (window.location.href.includes('game_10x10.html')){
-        dificultad = 10;
+        dificultad = 10
     }
     
-    const transaccion = baseDeDatos.transaction(['puntuaciones'], 'readwrite');
-    const almacen = transaccion.objectStore('puntuaciones');
-    const solicitud = almacen.get(dificultad);
+    const transaccion = baseDeDatos.transaction(['puntuaciones'], 'readwrite')
+    const almacen = transaccion.objectStore('puntuaciones')
+    const solicitud = almacen.get(dificultad)
 
     solicitud.onsuccess = () => {
         const datos = solicitud.result;
         if (!datos || intentosFinal < datos.intentos || (intentosFinal === datos.intentos && tiempoFinal < datos.tiempo)) {
-            almacen.put({ dificultad: dificultad, intentos: intentosFinal, tiempo: tiempoFinal });
+            almacen.put({ dificultad: dificultad, intentos: intentosFinal, tiempo: tiempoFinal })
         }
     };
 
     transaccion.oncomplete = () => {
-        console.log("Puntuación guardada.");
-        cargarMejoresPuntuaciones();
+        console.log("Puntuación guardada.")
+        cargarMejoresPuntuaciones()
     };
-    transaccion.onerror = (evento) => console.error("Error al guardar:", evento.target.errorCode);
+    transaccion.onerror = (evento) => console.error("Error al guardar:", evento.target.errorCode)
 }
 
 function cargarMejoresPuntuaciones() {
@@ -55,13 +55,13 @@ function cargarMejoresPuntuaciones() {
     
     let dificultad =0
     if (window.location.href.includes('game_4x4.html')){
-        dificultad = 4;
+        dificultad = 4
     }
     else if (window.location.href.includes('game_6x6.html')){
-        dificultad = 6;
+        dificultad = 6
     }
     else if (window.location.href.includes('game_10x10.html')){
-        dificultad = 10;
+        dificultad = 10
     }
     const transaccion = baseDeDatos.transaction(['puntuaciones'], 'readonly')
     const almacen = transaccion.objectStore('puntuaciones')

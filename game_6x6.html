@@ -5,36 +5,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="css/dificultad.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Juego 4x4</title>
+    <link rel="icon" href="images/icon-van.png">
+    <title>Juego 6x6</title>
 </head>
 <body>
-    <div class="top-bar">
-        <span id="timer">00:00</span>
-        <span id="attempts">Intentos: 0</span>
-        <span id="pairs">Parejas: 0 / 8</span>
+    
+    <div class="ooverlay-content">
+        <div class="MejoresPuntajes">
+            <h2>Mejores Puntuaciones</h2>
+            <p>Menor Intentos: <span id="MejorIntentos">N/A</span></p>
+            <p>Mejor Tiempo: <span id="MejorTiempo">N/A</span></p>
+        </div>
     </div>
+   
 
-
+    <div class="top-bar">
+        <p>
+            <strong>Tiempo:</strong>
+            <span id="timer"></span>
+        </p>
+        <p>
+            <Strong>Intentos:</Strong>
+            <span id="attempts">0</span>
+        </p>
+        <p>
+            <strong>Parejas Encontradas:</strong>
+            <span id="pairs"> 0 / 8</span>
+        </p>
+    </div>
+    
     <div class="container" name="container">
         <div class="table" id="table">
             
         </div>
     </div>
 
-    <div id="overlay" class="overlay hidden">
+    <a href="index.html">
+        <button id="give-up">Rendirse</button>
+    </a>
+    <div id="resultadoModal" class="overlay hidden">
         <div class="overlay-content">
-            <div class="MejoresPuntajes">
-                <h2>Mejores Puntuaciones</h2>
-                <p>🏆 Menor Intentos: <span id="MejorIntentos">N/A</span></p>
-                <p>⏱️ Mejor Tiempo: <span id="MejorTiempo">N/A</span></p>
-                <a href="index.html">
-                    <button id="play-again">Jugar Otra vez?</button>
-                </a>
-            </div>
+            <h2>¡Felicidades! Has ganado.</h2>
+            <p>Intentos: <span id="modalIntentos"></span></p>
+            <p>Tiempo: <span id="modalTiempo"></span> segundos</p>
+            <button onclick="cerrarModal()">Cerrar</button>
         </div>
     </div>
+
+
 
     <script src="js/variable.js"></script>
     <script src="js/configurationIndexedDB.js"></script>

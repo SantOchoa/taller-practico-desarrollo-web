@@ -9,9 +9,9 @@ function generarParesDeImagenes(numPares) {
 function mezclarCartas(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        [array[i], array[j]] = [array[j], array[i]]
     }
-    return array;
+    return array
 }
 
 function crearElementoCarta(idImagen) {
@@ -65,12 +65,12 @@ function manejarCoincidencia() {
 }
 function manejarNoCoincidencia() {
     setTimeout(() => {
-        primeraCarta.classList.remove('Volteada');
-        segundaCarta.classList.remove('Volteada');
+        primeraCarta.classList.remove('Volteada')
+        segundaCarta.classList.remove('Volteada')
         reiniciarTurno();
     }, 1000);
 }
 function reiniciarTurno() {
-    [primeraCarta, segundaCarta] = [null, null];
-    bloqueoTablero = false;
+    [primeraCarta, segundaCarta] = [null, null]
+    bloqueoTablero = false
 }

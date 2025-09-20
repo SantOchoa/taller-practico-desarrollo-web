@@ -11,8 +11,8 @@ let baseDeDatos
 let tablegame = document.getElementById('table')
 let contadorIntentos = document.getElementById('attempts')
 let contadorTiempo = document.getElementById('timer')
-let mejorIntentosEl = document.getElementById('MejorIntentos');
-let mejorTiempoEl = document.getElementById('MejorTiempo');
+let mejorIntentosEl = document.getElementById('MejorIntentos')
+let mejorTiempoEl = document.getElementById('MejorTiempo')
 let timerInterval = null
 let seconds = 0
 
